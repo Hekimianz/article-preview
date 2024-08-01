@@ -29,6 +29,7 @@ main {
   border-radius: 10px;
   box-shadow: 0px 40px 40px -10px #c9d5e1;
   font-family: "Manrope", sans-serif;
+  height: 504px;
 }
 
 .image {
@@ -46,6 +47,7 @@ main {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .text__top {
@@ -106,9 +108,63 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 20;
 }
 
-@media screen and (min-width: 1440px) {
+.shareActive__cont {
+  width: 327px;
+  height: 64px;
+  background-color: #48556a;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+}
+
+.share__text {
+  color: #9daec2;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.share__icons--cont {
+  margin-left: 21px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: #6e8098;
+}
+
+.activeIcon {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+.author__shareIcon--cont {
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.author__shareIcon--cont:hover {
+  background-color: #6e8098;
+}
+.author__shareIcon--cont:hover .author__shareIcon {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+@media screen and (min-width: 1333px) {
   .card {
     max-width: 730px;
     display: flex;
@@ -128,20 +184,30 @@ main {
     margin-right: 161px;
   }
 
-  .author__shareIcon--cont {
-    transition: filter 0.3s ease;
-    cursor: pointer;
-  }
-
-  .author__shareIcon--cont:hover {
-    background-color: #6e8098;
-  }
-
   .author__shareIcon {
     transition: filter 0.3s ease;
   }
 
-  .author__shareIcon--cont:hover .author__shareIcon {
-    filter: invert(1) grayscale(1) brightness(2);
+  .shareActive__cont {
+    border-radius: 10px;
+    width: 248px;
+    height: 47px;
+    right: 0;
+    bottom: 80px;
+    left: auto;
+    margin-right: -52px;
+  }
+
+  .shareActive__cont::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #48556a;
   }
 }
