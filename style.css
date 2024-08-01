@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+html,
+main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ecf2f8;
+}
+
+body,
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 327px;
+  border-radius: 10px;
+  box-shadow: 0px 40px 40px -10px #c9d5e1;
+  font-family: "Manrope", sans-serif;
+}
+
+.image {
+  background: url(./images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.content__wrap {
+  padding: 36px 32px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text__top {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #48556a;
+  margin-bottom: 1.2rem;
+}
+
+.text__lower {
+  color: #6e8098;
+  font-size: 1.3rem;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.author__cont {
+  display: flex;
+  align-items: center;
+}
+
+.author__img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 1.6rem;
+}
+
+.author__text--cont {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5.9rem;
+}
+
+.author__name,
+.author__publishDate {
+  font-size: 1.3rem;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  font-weight: bold;
+  color: #48556a;
+}
+
+.author__publishDate {
+  font-weight: 500;
+  color: #9daec2;
+}
+
+.author__shareIcon--cont {
+  background-color: #ecf2f8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
