@@ -107,3 +107,41 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (min-width: 1440px) {
+  .card {
+    max-width: 730px;
+    display: flex;
+    height: 280px;
+  }
+
+  .image {
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+
+  .text__top {
+    font-size: 2rem;
+  }
+  .author__text--cont {
+    margin-right: 161px;
+  }
+
+  .author__shareIcon--cont {
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+
+  .author__shareIcon--cont:hover {
+    background-color: #6e8098;
+  }
+
+  .author__shareIcon {
+    transition: filter 0.3s ease;
+  }
+
+  .author__shareIcon--cont:hover .author__shareIcon {
+    filter: invert(1) grayscale(1) brightness(2);
+  }
+}
